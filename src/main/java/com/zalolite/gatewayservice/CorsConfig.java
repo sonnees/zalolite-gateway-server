@@ -3,6 +3,7 @@ package com.zalolite.gatewayservice;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.core.Ordered;
 import org.springframework.web.cors.reactive.CorsWebFilter;
 import org.springframework.web.cors.reactive.UrlBasedCorsConfigurationSource;
 
@@ -12,5 +13,10 @@ public class CorsConfig {
     @Primary
     public CorsWebFilter corsWebFilter() {
         return new CorsWebFilter(new UrlBasedCorsConfigurationSource());
+    }
+
+    @Bean
+    public int corsGlobalFilterOrder() {
+        return Ordered.HIGHEST_PRECEDENCE;
     }
 }

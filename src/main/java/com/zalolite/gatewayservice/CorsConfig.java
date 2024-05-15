@@ -16,7 +16,7 @@ public class CorsConfig {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
         corsConfiguration.setAllowCredentials(true);
         corsConfiguration.addAllowedOrigin("http://localhost:3005");
-        corsConfiguration.addAllowedOrigin("https://zalo-lite-deploy-sj33-7gzlh8guo-tranquanghuy-09s-projects.vercel.app");
+        corsConfiguration.addAllowedOrigin("https://zalo-lite-deploy-sj33-a20eiw8cb-tranquanghuy-09s-projects.vercel.app");
         corsConfiguration.addAllowedOrigin("http://localhost:5173");
         corsConfiguration.addAllowedOrigin("http://localhost:80");
         corsConfiguration.addAllowedMethod("GET");
